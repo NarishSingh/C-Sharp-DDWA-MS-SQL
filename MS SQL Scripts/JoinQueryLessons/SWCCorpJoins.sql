@@ -34,3 +34,9 @@ SELECT E1.FirstName, E1.LastName, E2.LastName + ', ' + E2.FirstName AS ManagerNa
 FROM Employee AS E1
          INNER JOIN Employee AS E2 ON E1.ManagerID = E2.EmpID;
 
+-- CROSS JOIN
+SELECT E.FirstName, E.LastName, m.ClassName
+FROM Employee E
+         CROSS JOIN MgmtTraining M
+WHERE E.EmpID = 1;
+
