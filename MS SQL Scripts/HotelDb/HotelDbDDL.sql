@@ -30,7 +30,7 @@ CREATE TABLE Amenity
 
 CREATE TABLE Room
 (
-    RoomNum       INT IDENTITY (1,1) PRIMARY KEY,
+    RoomNum       INT PRIMARY KEY,
     AdaAccessible BIT DEFAULT (0) NOT NULL, --  bit == bool
     RoomTypeId    INT             NOT NULL,
     CONSTRAINT Fk_RoomType_Room FOREIGN KEY (RoomTypeId)
