@@ -53,7 +53,7 @@ CREATE TABLE RoomAmenity
 CREATE TABLE Address
 (
     AddressId INT IDENTITY (1,1) PRIMARY KEY,
-    Street   VARCHAR(50) NOT NULL,
+    Street    VARCHAR(50) NOT NULL,
     City      VARCHAR(50) NOT NULL,
     State     CHAR(2)     NOT NULL,
     ZipCode   CHAR(5)     NOT NULL
