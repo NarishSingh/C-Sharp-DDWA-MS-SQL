@@ -50,10 +50,10 @@ CREATE TABLE RoomAmenity
 );
 
 -- GUEST DATA
-CREATE TABLE GuestAddress
+CREATE TABLE Address
 (
     AddressId INT IDENTITY (1,1) PRIMARY KEY,
-    Address   VARCHAR(50) NOT NULL,
+    Street   VARCHAR(50) NOT NULL,
     City      VARCHAR(50) NOT NULL,
     State     CHAR(2)     NOT NULL,
     ZipCode   CHAR(5)     NOT NULL
@@ -66,8 +66,8 @@ CREATE TABLE Guest
     LastName  VARCHAR(50) NOT NULL,
     PhoneNum  CHAR(12)    NOT NULL,
     AddressId INT         NOT NULL,
-    CONSTRAINT Fk_GuestAddress_Guest FOREIGN KEY (AddressId)
-        REFERENCES GuestAddress (AddressId)
+    CONSTRAINT Fk_Address_Guest FOREIGN KEY (AddressId)
+        REFERENCES Address (AddressId)
 );
 
 -- RESERVATION DATA
