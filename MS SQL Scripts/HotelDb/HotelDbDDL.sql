@@ -24,7 +24,7 @@ CREATE TABLE RoomType
 CREATE TABLE Amenity
 (
     AmenityId INT IDENTITY (1,1) PRIMARY KEY,
-    Name      VARCHAR(20)   NOT NULL,
+    [Name]      VARCHAR(20)   NOT NULL,
     Cost      DECIMAL(4, 2) NOT NULL
 );
 
@@ -50,12 +50,12 @@ CREATE TABLE RoomAmenity
 );
 
 -- GUEST DATA
-CREATE TABLE Address
+CREATE TABLE [Address]
 (
     AddressId INT IDENTITY (1,1) PRIMARY KEY,
     Street    VARCHAR(50) NOT NULL,
     City      VARCHAR(50) NOT NULL,
-    State     CHAR(2)     NOT NULL,
+    [State]     CHAR(2)     NOT NULL,
     ZipCode   CHAR(5)     NOT NULL
 );
 
